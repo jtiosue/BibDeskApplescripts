@@ -72,6 +72,19 @@ However, editing is weird. Don't just open and then markup! You have to go Share
 
 An alternative is to open the pdf in Quick Look on you computer, press the Markup button, and then you can [cast](https://apple.stackexchange.com/questions/395595/continuity-markup-now-showing-in-preview) to iPad or iPhone to markup.
 
+Also, I create an Applescript file with the following contents:
+```
+using terms from application "BibDesk"
+	tell application "BibDesk"
+		
+		open "/Users/jtiosue/Google Drive/My Drive/References/references.bib"
+		run script "/Users/jtiosue/Library/Application Support/BibDesk/Scripts/fillArxivInfo.scpt"
+		
+	end tell
+end using terms from
+```
+Then, I add a keyboard shortcut in Mac settings (not associated to BibDesk) to run this script when I'm in Safari. So, when I'm in safari, I can copy and arXiv Eprint ID and run the keyboard shortcut, and it will automatically open my master references bib file and create the citation. 
+
 
 #### Misc notes
 
